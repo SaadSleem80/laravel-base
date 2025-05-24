@@ -20,9 +20,9 @@ class AuthService
     public function login(array $data): array
     {
         // Check if the user exists
-        if(!Auth::attempt(['email' => $data['email'], 'password' => $data['password']])) { 
+        if(!Auth::attempt(['email' => $data['email'], 'password' => $data['password']])) 
             throw new \Exception('Invalid credentials');
-        }
+        
 
         // Get the user
         $user = Auth::user();

@@ -34,6 +34,7 @@ class CategoriesController extends MainController
     public function store(CategoryRequest $request): JsonResponse
     {
         $request = $request->validated();
+        $saad = "saad";
         $response = $this->categoryRepository->create($request);
         return $this->response(__('response.success'), $response, Response::HTTP_CREATED);
     }
